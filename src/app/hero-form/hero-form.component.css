@@ -1,0 +1,16 @@
+.form-block{
+    background: rgb(200, 200, 207);
+    padding: 50px 50px;
+    min-height: 100vh;
+}
+
+.form-group{
+    padding: 20px;
+    background: rgb(233, 233, 241);
+    border-radius: 10px;
+    border: 1px solid rgb(168, 168, 178);
+}
+
+.form-label{
+    font-size: 18px;
+}
