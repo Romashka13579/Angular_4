@@ -3,20 +3,21 @@
         <h1 for="power">Hero Power</h1>
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" required
+            <input type="text" class="form-control ng-untouched ng-pristine ng-valid" id="name" required
             [(ngModel)]="model.name" name="name">
         </div>
         <div class="mb-3">
             <label for="Super Name" class="form-label">Super Name</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control ng-untouched ng-pristine ng-valid" id="name" required
+            [(ngModel)]="model.superName" name="name">
         </div>
         <div class="mb-4">
             <label for="Super Name" class="form-label">Super Power</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="model.superPower" name="name">
         </div>
         <div class="mb-5">
             <label for="Element" class="form-label">Element</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="model.element" name="name">
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
