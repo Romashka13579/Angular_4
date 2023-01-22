@@ -9,3 +9,8 @@
     bottom: 10px;
     left: 10px;
 }
+
+.selected{
+    background: rgb(6, 14, 123);
+    border-color: rgb(7, 11, 72);
+}

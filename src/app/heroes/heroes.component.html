@@ -1,10 +1,19 @@
 <div class="d-flex align-items-start flex-column"> 
-    <button type="button" class="btn btn-primary" *ngFor="let hero of heroes" (click) = "Select(hero)">
-        <span>Name: {{hero.name}}</span>
-    </button>
+    <div *ngFor="let hero of heroes">
+        <button [class.selected]="hero === selectedHero" type="button" class="btn btn-primary" (click) = "Select(hero)">
+            <span>Name: {{hero.name}}</span>
+        </button>
+    </div>
 </div>
 <div class="more" *ngIf="selectedHero">
-    <h2>Selected Hero Details</h2>
-    <div>His Id: {{selectedHero.id}}</div>
-    <div>His Name :{{selectedHero.name}}</div>
+    <h4>Selected Hero Details</h4>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" for="hero-id" >Hero Id:</span>
+        <input id="hero-id" [(ngModel)]="selectedHero.id" type="text" class="form-control" placeholder="id">
+      </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" for="hero-name" >Hero Name:</span>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" type="text" class="form-control" placeholder="name">
+      </div>
+    <h4>Here you can change some info about the hero</h4>
 </div>
