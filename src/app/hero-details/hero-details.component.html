@@ -1,0 +1,12 @@
+<div class="more" *ngIf="hero">
+    <h4>Selected Hero Details</h4>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" for="hero-id" >Hero Id:</span>
+        <input id="hero-id" [(ngModel)]="hero.id" type="text" class="form-control" placeholder="id">
+      </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" for="hero-name" >Hero Name:</span>
+        <input id="hero-name" [(ngModel)]="hero.name" type="text" class="form-control" placeholder="name">
+      </div>
+    <h4>Here you can change some info about the hero</h4>
+</div>

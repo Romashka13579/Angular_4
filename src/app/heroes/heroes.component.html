@@ -5,15 +5,5 @@
         </button>
     </div>
 </div>
-<div class="more" *ngIf="selectedHero">
-    <h4>Selected Hero Details</h4>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1" for="hero-id" >Hero Id:</span>
-        <input id="hero-id" [(ngModel)]="selectedHero.id" type="text" class="form-control" placeholder="id">
-      </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1" for="hero-name" >Hero Name:</span>
-        <input id="hero-name" [(ngModel)]="selectedHero.name" type="text" class="form-control" placeholder="name">
-      </div>
-    <h4>Here you can change some info about the hero</h4>
-</div>
+
+<app-hero-details [hero] = "selectedHero"></app-hero-details>
