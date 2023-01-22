@@ -1,3 +1,10 @@
-<p>{{hero}}</p>
-<h2>Name: {{hero.name}}</h2>
-<h2>Id: {{hero.id}}</h2>
+<div class="d-flex align-items-start flex-column"> 
+    <button type="button" class="btn btn-primary" *ngFor="let hero of heroes" (click) = "Select(hero)">
+        <span>Name: {{hero.name}}</span>
+    </button>
+</div>
+<div class="more" *ngIf="selectedHero">
+    <h2>Selected Hero Details</h2>
+    <div>His Id: {{selectedHero.id}}</div>
+    <div>His Name :{{selectedHero.name}}</div>
+</div>
