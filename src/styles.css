@@ -3,13 +3,14 @@
     gap: 10px;
 }
 
-.more{
-    position:absolute;
-    bottom: 10px;
-    left: 10px;
-}
-
 .selected{
     background: rgb(6, 14, 123);
     border-color: rgb(7, 11, 72);
+}
+
+.flex-main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
 }
