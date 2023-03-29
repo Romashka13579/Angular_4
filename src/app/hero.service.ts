@@ -14,8 +14,7 @@ export class HeroService {
 
   getHeroes(): Observable<Hero[]>{
     this.messagesService.add('HeroService: fetched heroes');
-    const heroes = of(listOfHeroes);
-    return heroes;
+    return this.http.get<Hero[]>(this.heroesUrl)
   }
 
   getHero(id: number): Observable<Hero> {
@@ -25,4 +24,9 @@ export class HeroService {
     this.messagesService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
+  private log(message: string) {
+    this.messagesService.add(`HeroService: ${message}`);
+  }
+
+  private heroesUrl = 'api/heroes';
 }
